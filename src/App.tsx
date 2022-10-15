@@ -2,7 +2,6 @@ import React from "react";
 import "./App.css";
 import sloth from "../src/sloth.jpg";
 import { Button, Col, Container, Row } from "react-bootstrap";
-import { isBoxedPrimitive } from "util/types";
 
 function App(): JSX.Element {
     return (
