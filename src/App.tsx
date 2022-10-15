@@ -25,7 +25,7 @@ function App(): JSX.Element {
                 Log Hello World
             </Button>
             <img src={sloth} alt="Photo of a sloth" />
-            <div style={{ backgroundColor: "red", width: 1000, height: 1000 }}>
+            <div style={{ backgroundColor: "red", width: 1600, height: 1000 }}>
                 <Container>
                     <Row>
                         <Col>First column.</Col>
