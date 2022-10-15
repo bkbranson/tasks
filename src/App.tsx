@@ -1,7 +1,8 @@
 import React from "react";
 import "./App.css";
 import sloth from "../src/sloth.jpg";
-import { Button } from "react-bootstrap";
+import { Button, Col, Container, Row } from "react-bootstrap";
+import { isBoxedPrimitive } from "util/types";
 
 function App(): JSX.Element {
     return (
@@ -13,6 +14,7 @@ function App(): JSX.Element {
             <p>
                 Edit <code>src/App.tsx</code> and save. This page will
                 automatically reload. Brandon was here. Testing this again. P.
+                Hello World.
             </p>
             <ul>
                 <li>First</li>
@@ -23,6 +25,14 @@ function App(): JSX.Element {
                 Log Hello World
             </Button>
             <img src={sloth} alt="Photo of a sloth" />
+            <div style={{ backgroundColor: "red", width: 1000, height: 1000 }}>
+                <Container>
+                    <Row>
+                        <Col>First column.</Col>
+                        <Col>Second column.</Col>
+                    </Row>
+                </Container>
+            </div>
         </div>
     );
 }
