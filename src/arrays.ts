@@ -1,7 +1,3 @@
-import { appendFileSync } from "fs";
-import { endianness } from "os";
-import { cursorTo } from "readline";
-
 /**
  * Consume an array of numbers, and return a new array containing
  * JUST the first and last number. If there are no elements, return
@@ -142,7 +138,7 @@ export function injectPositive(values: number[]): number[] {
             sum
         );
         return ret;
-    }else{
+    } else {
         /* Sum up all of the numbers in sum, put sum at end, return. Don't mutate make copies */
         const sum = values.reduce(
             (currTot: number, num: number) => currTot + num,
