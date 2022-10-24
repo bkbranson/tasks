@@ -1,6 +1,6 @@
 import { Answer } from "./interfaces/answer";
 import { Question, QuestionType } from "./interfaces/question";
-import {makeBlankQuestion, duplicateQuestion} from "./objects"
+import { makeBlankQuestion, duplicateQuestion } from "./objects";
 
 /**
  * Consumes an array of questions and returns a new array with only the questions
@@ -162,7 +162,7 @@ export function publishAll(questions: Question[]): Question[] {
  * Consumes an array of Questions and produces whether or not all the questions
  * are the same type. They can be any type, as long as they are all the SAME type.
  */
-export function sameType(questions: Question[]): boolean{
+export function sameType(questions: Question[]): boolean {
     if (questions.length === 0) {
         return true;
     }
@@ -193,7 +193,6 @@ export function addNewQuestion(
     const blank: Question = makeBlankQuestion(id, name, type);
     ret.push(blank);
     return ret;
-
 }
 
 /***
@@ -207,14 +206,14 @@ export function renameQuestionById(
     newName: string
 ): Question[] {
     const copy: Question[] = questions.map(
-        (question: Question): Question => (
-            {
-                ...question,
-                options: [...question.options],
-            }
-        )
+        (question: Question): Question => ({
+            ...question,
+            options: [...question.options]
+        })
     );
-    const modInd: number = copy.findIndex((question: Question): boolean => question.id === targetId);//ensure
+    const modInd: number = copy.findIndex(
+        (question: Question): boolean => question.id === targetId
+    ); //ensure
     copy[modInd].id = targetId;
     copy[modInd].name = newName;
     return copy;
@@ -233,16 +232,16 @@ export function changeQuestionTypeById(
     newQuestionType: QuestionType
 ): Question[] {
     const copy: Question[] = questions.map(
-        (question: Question): Question => (
-            {
-                ...question,
-                options: [...question.options],
-            }
-        )
+        (question: Question): Question => ({
+            ...question,
+            options: [...question.options]
+        })
     );
-    const modInd: number = copy.findIndex((question: Question): boolean => question.id === targetId);
+    const modInd: number = copy.findIndex(
+        (question: Question): boolean => question.id === targetId
+    );
     copy[modInd].type = newQuestionType;
-    if(newQuestionType !== "multiple_choice_question"){
+    if (newQuestionType !== "multiple_choice_question") {
         copy[modInd].options = [];
     }
     return copy;
@@ -265,17 +264,17 @@ export function editOption(
     newOption: string
 ): Question[] {
     const copy: Question[] = questions.map(
-        (question: Question): Question => (
-            {
-                ...question,
-                options: [...question.options],
-            }
-        )
+        (question: Question): Question => ({
+            ...question,
+            options: [...question.options]
+        })
     );
-    const modInd: number = copy.findIndex((question: Question): boolean => question.id === targetId);
-    if(targetOptionIndex === -1){
+    const modInd: number = copy.findIndex(
+        (question: Question): boolean => question.id === targetId
+    );
+    if (targetOptionIndex === -1) {
         copy[modInd].options.push(newOption);
-    }else{
+    } else {
         copy[modInd].options.splice(targetOptionIndex, 1, newOption);
     }
     return copy;
@@ -293,15 +292,15 @@ export function duplicateQuestionInArray(
     newId: number
 ): Question[] {
     const copy: Question[] = questions.map(
-        (question: Question): Question => (
-            {
-                ...question,
-                options: [...question.options],
-            }
-        )
+        (question: Question): Question => ({
+            ...question,
+            options: [...question.options],
+        })
     );
-    const modInd: number = copy.findIndex((question: Question): boolean => question.id === targetId);
+    const modInd: number = copy.findIndex(
+        (question: Question): boolean => question.id === targetId
+    );
     const dup: Question = duplicateQuestion(newId, questions[modInd]);
-    copy.splice(modInd+1, 0, dup);
+    copy.splice(modInd + 1, 0, dup);
     return copy;
 }
