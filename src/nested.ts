@@ -303,7 +303,7 @@ export function duplicateQuestionInArray(
     const copy: Question[] = questions.map(
         (question: Question): Question => ({
             ...question,
-            options: [...question.options],
+            options: [...question.options]
         })
     );
     const modInd: number = copy.findIndex(
