@@ -38,7 +38,7 @@ export function findQuestion(
 ): Question | null {
     if (
         questions.length === 0 ||
-        questions.find((question: Question) => question.id === id) == undefined
+        !questions.find((question: Question) => question.id === id) // will evaluate to false if undefined, !false = true
     ) {
         return null;
     } else {
