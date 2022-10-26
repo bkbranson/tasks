@@ -46,7 +46,7 @@ export function findQuestion(
         ret = questions.find((question: Question) => question.id === id);
         if (ret == undefined) {
             return null;
-        }
+        } // to commit
         return ret;
     }
 }
