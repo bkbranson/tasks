@@ -36,10 +36,19 @@ export function findQuestion(
     questions: Question[],
     id: number
 ): Question | null {
-    if (questions.find((question: Question) => question.id === id) == undefined)
+    let ret = null;
+    if (
+        questions.length === 0 ||
+        questions.find((question: Question) => question.id === id) == undefined
+    ) {
         return null;
-    const ret = questions.find((question: Question) => question.id === id);
-    return ret;
+    } else {
+        ret = questions.find((question: Question) => question.id === id);
+        if (ret == undefined) {
+            return null;
+        } // to commit
+        return ret;
+    }
 }
 
 /**
@@ -294,7 +303,7 @@ export function duplicateQuestionInArray(
     const copy: Question[] = questions.map(
         (question: Question): Question => ({
             ...question,
-            options: [...question.options],
+            options: [...question.options]
         })
     );
     const modInd: number = copy.findIndex(
