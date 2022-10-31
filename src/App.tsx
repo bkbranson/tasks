@@ -39,6 +39,7 @@ function App(): JSX.Element {
             <hr></hr>
             {/* <DoubleHalf></DoubleHalf> */}
             <hr></hr>
+            <DoubleHalf></DoubleHalf>
             <ChooseTeam></ChooseTeam>
             <hr></hr>
             <ColoredBox></ColoredBox>
