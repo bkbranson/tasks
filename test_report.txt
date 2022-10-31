@@ -10,11 +10,33 @@ PASS src/arrays.test.ts
 PASS src/objects.test.ts
 PASS src/components/StartAttempt.test.tsx
 PASS src/components/TwoDice.test.tsx
+PASS src/form-components/MultipleChoiceQuestion.test.tsx
 PASS src/bad-components/ChooseTeam.test.tsx
 PASS src/bad-components/DoubleHalf.test.tsx
 PASS src/functions.test.ts
+PASS src/form-components/CheckAnswer.test.tsx
+PASS src/form-components/EditMode.test.tsx
 PASS src/components/ChangeType.test.tsx
 PASS src/components/CycleHoliday.test.tsx
+PASS src/form-components/GiveAttempts.test.tsx
+PASS src/form-components/ChangeColor.test.tsx
+  ● Console
+
+    console.log
+      New color should be yellow, but it is [object Object]
+
+      at updateColor (src/form-components/ChangeColor.tsx:9:17)
+
+    console.log
+      New color should be black, but it is [object Object]
+
+      at updateColor (src/form-components/ChangeColor.tsx:9:17)
+
+    console.log
+      New color should be red, but it is [object Object]
+
+      at updateColor (src/form-components/ChangeColor.tsx:9:17)
+
 PASS src/components/Counter.test.tsx
 PASS src/components/RevealAnswer.test.tsx
 PASS src/bad-components/ColoredBox.test.tsx
@@ -72,35 +94,41 @@ PASS src/bad-components/ShoveBox.test.tsx
       at updateFunctionComponent (node_modules/react-dom/cjs/react-dom.development.js:17356:20)
 
 PASS src/App.test.tsx
---------------------|---------|----------|---------|---------|-------------------
-File                | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
---------------------|---------|----------|---------|---------|-------------------
-All files           |   99.19 |    97.61 |     100 |   99.17 |                   
- src                |   98.83 |    98.07 |     100 |   98.78 |                   
-  App.tsx           |     100 |      100 |     100 |     100 |                   
-  arrays.ts         |     100 |      100 |     100 |     100 |                   
-  functions.ts      |     100 |      100 |     100 |     100 |                   
-  nested.ts         |   98.78 |    93.33 |     100 |   98.75 | 48                
-  objects.ts        |   95.23 |      100 |     100 |   95.23 | 53                
- src/bad-components |     100 |       50 |     100 |     100 |                   
-  ChooseTeam.tsx    |     100 |       50 |     100 |     100 | 18                
-  ColoredBox.tsx    |     100 |      100 |     100 |     100 |                   
-  DoubleHalf.tsx    |     100 |      100 |     100 |     100 |                   
-  ShoveBox.tsx      |     100 |      100 |     100 |     100 |                   
- src/components     |     100 |      100 |     100 |     100 |                   
-  ChangeType.tsx    |     100 |      100 |     100 |     100 |                   
-  Counter.tsx       |     100 |      100 |     100 |     100 |                   
-  CycleHoliday.tsx  |     100 |      100 |     100 |     100 |                   
-  RevealAnswer.tsx  |     100 |      100 |     100 |     100 |                   
-  StartAttempt.tsx  |     100 |      100 |     100 |     100 |                   
-  TwoDice.tsx       |     100 |      100 |     100 |     100 |                   
- src/interfaces     |       0 |        0 |       0 |       0 |                   
-  answer.ts         |       0 |        0 |       0 |       0 |                   
-  question.ts       |       0 |        0 |       0 |       0 |                   
---------------------|---------|----------|---------|---------|-------------------
+-----------------------------|---------|----------|---------|---------|-------------------
+File                         | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
+-----------------------------|---------|----------|---------|---------|-------------------
+All files                    |   99.27 |    97.11 |     100 |   99.25 |                   
+ src                         |   98.83 |    98.07 |     100 |   98.78 |                   
+  App.tsx                    |     100 |      100 |     100 |     100 |                   
+  arrays.ts                  |     100 |      100 |     100 |     100 |                   
+  functions.ts               |     100 |      100 |     100 |     100 |                   
+  nested.ts                  |   98.78 |    93.33 |     100 |   98.75 | 48                
+  objects.ts                 |   95.23 |      100 |     100 |   95.23 | 53                
+ src/bad-components          |     100 |       50 |     100 |     100 |                   
+  ChooseTeam.tsx             |     100 |       50 |     100 |     100 | 18                
+  ColoredBox.tsx             |     100 |      100 |     100 |     100 |                   
+  DoubleHalf.tsx             |     100 |      100 |     100 |     100 |                   
+  ShoveBox.tsx               |     100 |      100 |     100 |     100 |                   
+ src/components              |     100 |      100 |     100 |     100 |                   
+  ChangeType.tsx             |     100 |      100 |     100 |     100 |                   
+  Counter.tsx                |     100 |      100 |     100 |     100 |                   
+  CycleHoliday.tsx           |     100 |      100 |     100 |     100 |                   
+  RevealAnswer.tsx           |     100 |      100 |     100 |     100 |                   
+  StartAttempt.tsx           |     100 |      100 |     100 |     100 |                   
+  TwoDice.tsx                |     100 |      100 |     100 |     100 |                   
+ src/form-components         |     100 |       95 |     100 |     100 |                   
+  ChangeColor.tsx            |     100 |      100 |     100 |     100 |                   
+  CheckAnswer.tsx            |     100 |      100 |     100 |     100 |                   
+  EditMode.tsx               |     100 |    91.66 |     100 |     100 | 39                
+  GiveAttempts.tsx           |     100 |      100 |     100 |     100 |                   
+  MultipleChoiceQuestion.tsx |     100 |      100 |     100 |     100 |                   
+ src/interfaces              |       0 |        0 |       0 |       0 |                   
+  answer.ts                  |       0 |        0 |       0 |       0 |                   
+  question.ts                |       0 |        0 |       0 |       0 |                   
+-----------------------------|---------|----------|---------|---------|-------------------
 
-Test Suites: 15 passed, 15 total
-Tests:       110 passed, 110 total
+Test Suites: 20 passed, 20 total
+Tests:       134 passed, 134 total
 Snapshots:   0 total
-Time:        8.987 s
+Time:        11.336 s
 Ran all test suites.
